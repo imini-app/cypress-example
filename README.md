@@ -2,6 +2,9 @@
 
 > Demo running complete Docker image cypress/included
 
+## You need a environment with node and docker installed
+You can clone this repo into any environment with npm and docker available
+
 ## Set up
 ```shell
 npm install
