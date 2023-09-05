@@ -1,6 +1,7 @@
 // enables intelligent code completion for Cypress commands
 // https://on.cypress.io/intelligent-code-completion
 /// <reference types="Cypress" />
+import config from '../../test-config'
 
 context('Cypress TodoMVC test', () => {
   beforeEach(() => {
@@ -10,11 +11,12 @@ context('Cypress TodoMVC test', () => {
 
   // Use cypress.json to set up variables
   it('login', function () {
-    const swimmer = Cypress.env('swimmer')
+    // Set up the variable in the config file.
+    // Couldn't get the native cypress config working...
     cy.get('#swimmer')
-      .type(swimmer)
+      .type(config.swimmer)
     cy.get('#password')
-      .type(swimmer)
+      .type(config.swimmer)
     cy.get('.MuiDialogActions-root button').click()
 
     cy.get('h1').should('be.visible')
