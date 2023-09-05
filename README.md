@@ -2,6 +2,12 @@
 
 > Demo running complete Docker image cypress/included
 
+## Set up
+```shell
+npm install
+chmod 0755 ./cy-run.sh
+```
+
 ## Run tests
 
 ```shell
